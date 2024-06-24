@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activities</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      #container {
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 1px solid;
+        background-color: rgb(220, 193, 160);
+        border-radius: 9px;
+        box-shadow: 1px 1px 11.5px rgb(207, 203, 203);
+      }
+      #btn,
+      #btn-1,
+      #btn-2 {
+        border: none;
+        border-radius: 24px;
+        background-color: rgb(189, 114, 21);
+        padding: 12px;
+        cursor: pointer;
+      }
+      .sec {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+      }
+      .entry--1 {
+        width: 50vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: 9px;
+        box-shadow: 1px 1px 11.5px rgb(207, 203, 203);
+        background-color: darkgrey;
+      }
+      #sectionEntry {
+        display: flex;
+        justify-content: center;
+        margin-left: 330px;
+        margin-top: 150px;
+      }
+      .input {
+        display: flex;
+        gap: 10px;
+      }
+      input {
+        border: none;
+        border-radius: 16px;
+      }
+      #btn--1 {
+        border: none;
+        width: 15vw;
+        background-color: grey;
+      }
+      .submit {
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sectionHome">
+      <div class="sec">
+        <div></div>
+        <div id="container">
+          <button id="btn" onclick="display('sectionEntry')">
+            Patient entry
+          </button>
+          <button id="btn-1" onclick="display('sectionView')">
+            Appointments
+          </button>
+          <button id="btn-2" onclick=" display('sectionMedicine')">
+            Medical History
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="sectionEntry">
+      <div></div>
+      <form action="patient.php" method="post" class="entry--1">
+        <div class="input">
+          <label for="name">name: </label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="input">
+          <label for="age">age: </label>
+          <input type="number" id="age" name="age" required />
+        </div>
+        <div class="input">
+          <label for="problem">Problem: </label>
+          <input type="text" id="problem" name="problem" required />
+        </div>
+        <div class="input">
+          <label for="address">address: </label>
+          <input type="text" id="address" name="address" required />
+        </div>
+        <div>
+          <input type="submit" value="submit" id="btn--1" class="submit" />
+        </div>
+      </form>
+    </div>
+    <div id="sectionView">
+      <form action="appointments.php" method="post" class="entry--1">
+        <input type="submit" value="Check Appointments" id="btn--1" />
+      </form>
+    </div>
+
+    <div id="sectionMedicine">
+      <form action="medicine.php" method="post">
+        <button>Reports</button>
+      </form>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"
+    ></script>
+  </body>
+</html>

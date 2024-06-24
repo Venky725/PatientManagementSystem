@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .homeBackground {
+        background-image: radial-gradient(#42eff5, #42c2f5, #429bf5, #4b42f5);
+        height: 100vh;
+        background-size: cover;
+      }
+      .homeCard {
+        text-align: center;
+        background-color: white;
+        border-radius: 25px;
+        width: 60vw;
+        padding: 20px;
+        margin-left: 250px;
+      }
+      .button {
+        color: white;
+        background-color: #7b964b;
+        width: 138px;
+        height: 36px;
+        border-width: 0px;
+        border-radius: 20px;
+      }
+      .homemainheading {
+        font-family: "Roboto";
+      }
+      .homeparagraph {
+        font-family: "Roboto";
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sectionHome">
+      <div class="homeBackground d-flex flex-column justify-content-center">
+        <div class="homeCard">
+          <h1 class="homemainheading">Patient Management System</h1>
+          <button class="button" onclick="display('sectionLogin')">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="sectionLogin">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <div
+          style="
+            background-color: #c4bec4;
+            width: 30vw;
+            height: 65vh;
+            padding: 20px;
+            padding-top: 50px;
+            margin-top: 30px;
+            text-align: center;
+          "
+        >
+          <form action="login.php" method="POST">
+            <label for="username">username : </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+            /><br /><br />
+
+            <label for="password">password : </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br /><br />
+
+            <input
+              type="submit"
+              value="Login"
+              style="
+                color: white;
+                background-color: #815469f1;
+                width: 120px;
+                height: 36px;
+                border-width: 0px;
+                border-radius: 20px;
+                margin-bottom: 8px;
+              "
+            />
+          </form>
+          <div class="d-flex flex-row">
+            <hr style="border-width: 2px; color: black; width: 10vw" />
+            <p>or</p>
+            <hr style="border-width: 2px; color: black; width: 10vw" />
+          </div>
+
+          <button
+            style="
+              color: white;
+              background-color: #c4bec4;
+              width: 120px;
+              height: 36px;
+              border-width: 0px;
+            "
+            onclick="display('sectionRegister')"
+          >
+            sign up
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="sectionRegister">
+      <div style="display: flex; flex-direction: column; align-items: center">
+        <div
+          style="
+            background-color: #a899c5;
+            width: 30vw;
+            height: 68vh;
+            padding: 20px;
+            padding-top: 10px;
+            margin-top: 30px;
+          "
+        >
+          <form action="register.php" method="POST">
+            <label for="username : ">username</label><br />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              required
+            /><br /><br />
+
+            <label for="password : ">password</label><br />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+            /><br /><br />
+
+            <label for="number : ">phone.no</label><br />
+            <input
+              type="number"
+              id="number"
+              name="number"
+              required
+            /><br /><br />
+
+            <label for="email">email</label><br />
+            <input type="email" id="email" name="email" required /><br /><br />
+            <div class="d-flex felx-row justify-content-between">
+              <input
+                type="submit"
+                value="Submit"
+                style="
+                  color: white;
+                  background-color: #95bac5f1;
+                  width: 100px;
+                  height: 36px;
+                  border-width: 0px;
+                  border-radius: 8px;
+                  margin-bottom: 8px;
+                "
+              />
+              <button
+                style="
+                  color: white;
+                  background-color: #061f27f1;
+                  width: 100px;
+                  height: 36px;
+                  border-width: 0px;
+                  border-radius: 8px;
+                  margin-bottom: 8px;
+                "
+                onclick="display('sectionLogin')"
+              >
+                Back
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+<body>
+  <div id="sectionLogin">
+    <div style="display: flex; flex-direction: column; align-items: center">
+      <div
+        style="
+          background-color: #c4bec4;
+          width: 30vw;
+          height: 65vh;
+          padding: 20px;
+          padding-top: 50px;
+          margin-top: 30px;
+          text-align: center;
+        "
+      >
+        <form action="login.php" method="POST">
+          <label for="username">username : </label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            required
+          /><br /><br />
+
+          <label for="password">password : </label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          /><br /><br />
+
+          <input
+            type="submit"
+            value="Login"
+            style="
+              color: white;
+              background-color: #815469f1;
+              width: 120px;
+              height: 36px;
+              border-width: 0px;
+              border-radius: 20px;
+              margin-bottom: 8px;
+            "
+          />
+        </form>
+        </div>
+        </div>
+</body>
+</html>
